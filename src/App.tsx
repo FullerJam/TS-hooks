@@ -1,5 +1,6 @@
 import { Container } from "reactstrap"
 import UseStateComponent from "./Components/useStateComponent"
+import UseEffectComponent from "./Components/useEffectComponent"
 
 const App = () => {
   return (
@@ -14,12 +15,14 @@ const App = () => {
           <div className="col-4">
             <UseStateComponent/>
           </div>
-          <div className="col-4"></div>
+          <div className="col-4">
+            <UseEffectComponent/>
+          </div>
           <div className="col-4"></div>
         </div>
       </div>
     </Container>
-  );
+  )
 }
 
-export default App;
+export default App
