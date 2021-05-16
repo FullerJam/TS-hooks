@@ -1,25 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Container } from "reactstrap"
+import UseStateComponent from "./Components/useStateComponent"
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <div className="m-5">
+        <div className="row mb-5">
+          <div className="col-12 text-center">
+            <h4>Typescript react hooks</h4>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-4">
+            <UseStateComponent/>
+          </div>
+          <div className="col-4"></div>
+          <div className="col-4"></div>
+        </div>
+      </div>
+    </Container>
   );
 }
 
