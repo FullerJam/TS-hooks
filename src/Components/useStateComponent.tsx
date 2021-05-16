@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { CardBody, CardFooter, CardHeader } from "reactstrap"
 
-const useStateComponent = () => {
+const UseStateComponent = () => {
     const [array, setArray] = useState<number[]>([]);
     const [name, setName] = useState<string | null>(null);
     return (
@@ -41,4 +41,4 @@ const useStateComponent = () => {
     )
 }
 
-export default useStateComponent;
+export default UseStateComponent;

@@ -25,7 +25,7 @@ const UseEffectComponent = () => {
             </CardBody>
             <CardFooter>
                 <div className="row">
-                    <h5>useEffect results below</h5>
+                    <h5>Timer</h5>
                 </div>
                 <div className="row">
                     {value}
