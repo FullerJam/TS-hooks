@@ -6,9 +6,10 @@ import UserContext, {UserState} from './Services/userStore'
 import UseStateComponent from "./Components/UseStateComponent"
 import UseEffectComponent from "./Components/UseEffectComponent"
 import UseContextComponent from "./Components/UseContextComponent"
+import UseCustomHookComponent from "./Components/UseCustomHookComponent"
 
 const App = () => {
-  const [users] = useState<UserState>({
+  const [users, setUsers] = useState<UserState>({
     firstName:"James",
     lastName:"Fuller"
   })
@@ -31,6 +32,13 @@ const App = () => {
             <div className="col-4">
               <UseContextComponent/>
             </div>
+          </div>
+          <div className="row">
+            <div className="col-4">
+              <UseCustomHookComponent/>
+            </div>
+            <div className="col-4"></div>
+            <div className="col-4"></div>
           </div>
         </div>
       </Container>
