@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.3](https://github.com/FullerJam/TS-hooks/compare/v0.1.2...v0.1.3) (2021-05-20)
+
+
+### Features
+
+* added useCustomHookComponent, compile error @typescript-eslint/no-unused-expressions ([7c82392](https://github.com/FullerJam/TS-hooks/commit/7c82392804ca3ff7a44d21ec3b1f39414197f6fb))
+
+
+### Bug Fixes
+
+* fixed useCustomHookComponent. Also added styled components & dayjs plus relevant typescript definition files. ([625cc2a](https://github.com/FullerJam/TS-hooks/commit/625cc2abd550686eaf7fa89f28993ed67ebe5e9f))
+
 ### [0.1.2](https://github.com/FullerJam/TS-hooks/compare/v0.1.1...v0.1.2) (2021-05-16)
 
 
