@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 import { CardBody, CardFooter, CardHeader } from "reactstrap"
+import { ProfileImgCircleMask } from "./UseCustomHookComponent.styled"
+import dayjs from "dayjs"
 
 interface Result {
   gender: string;
@@ -82,16 +84,19 @@ const useFetchData = (url: string) => {
   const [done, setDone] = useState(false)
 
   useEffect(() => {
-    async () => {
+    async function fetchRandomUser():Promise<any> {
       try {
         const response = await fetch(url); // "https://api.randomuser.me?results=1" 
+        if (!response.ok){
+          throw new Error(`HTTP error status: ${response.status}`);
+        }
         const apiData = await response.json() // call api and await response
-        setData(apiData) // populate data const with array of objects
+        setData(apiData.results) // populate data const with array of objects
         setDone(true)
       } catch (e) {
         setData(e.message)
       }
-    }   
+    } fetchRandomUser();
   }, [url]); // runs when a url arg is provided
 
   return {
@@ -113,16 +118,19 @@ const CustomHookComponent = () => {
       <CardBody className="bg-light">
         <div className="row my-3 justify-content-center">
           {done && (
-            <img src={data![0].picture.thumbnail} alt="thumbnail" />
+            <ProfileImgCircleMask src={data![0].picture.large} alt="thumbnail" />
           )}
         </div>
       </CardBody>
       <CardFooter>
         <div className="row">
-
+            <p><strong>Name&nbsp;</strong> {done && `${data![0].name.first} ${data![0].name.last}`}</p>
         </div>
         <div className="row">
-
+            <p><strong>DOB&nbsp;</strong> {done && `${dayjs(data![0].dob.date).format('DD/MM/YY')}`}</p>
+        </div>
+        <div className="row">
+            <p><strong>AGE&nbsp;</strong> {done && `${(data![0].dob.age)}`}</p>
         </div>
       </CardFooter>
     </div>

@@ -17,28 +17,28 @@ const App = () => {
     <UserContext.Provider value={users}>
       <Container>
         <div className="m-5">
-          <div className="row mb-5">
+          <div className="row">
             <div className="col-12 text-center">
               <h4>Typescript react hooks</h4>
             </div>
           </div>
           <div className="row">
-            <div className="col-4">
+            <div className="col-md-4 my-4 my-md-0">
               <UseStateComponent />
             </div>
-            <div className="col-4">
+            <div className="col-md-4 my-4 my-md-0">
               <UseEffectComponent />
             </div>
-            <div className="col-4">
+            <div className="col-md-4 my-4 my-md-0">
               <UseContextComponent/>
             </div>
           </div>
-          <div className="row">
-            <div className="col-4">
+          <div className="row my-md-5">
+            <div className="col-md-4 my-4 my-md-0">
               <UseCustomHookComponent/>
             </div>
-            <div className="col-4"></div>
-            <div className="col-4"></div>
+            <div className="col-md-4 my-4 my-md-0"></div>
+            <div className="col-md-4 my-4 my-md-0"></div>
           </div>
         </div>
       </Container>
